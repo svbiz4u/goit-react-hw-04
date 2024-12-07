@@ -10,7 +10,7 @@ const SearchBar = ({ onSearchSubmit }) => {
       const form = e.target;
       const value = form.elements.search.value.trim();
       if (value === "") {
-        return toast.error("Please enter a search term to find images.", {
+        return toast.error("Please enter a search query", {
           duration: 1500,
           position: "top-right",
         });

@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react'
+import { fetchImages } from './services/api';
 import './App.css'
 import SearchBar from './components/SearchBar/SearchBar';
 import ImageGallery from './components/ImageGalley/ImageGallery';
-import Loader from './components/Loader/Loader.';
 import ErrorMessage from './components/ErrorMessage/ErrorMessage';
 import LoadMoreBtn from './components/LoadMoreBtn/LoadMoreBtn';
 import ImageModal from './components/ImageModal/ImageModal';
-import { fetchImages } from './services/api,js';
+import Loader from './components/Loader/Loader';
+
+
 
 function App() {
   const [query, setQuery] = useState("");
@@ -76,7 +78,7 @@ function App() {
       {isEmpty && (
         <ErrorMessage
           text={
-            "Sorry, there are no images matching your search query. Please try again!"
+            "Sorry, there are no images matching your search query"
           }
         />
       )}
